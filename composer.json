@@ -1,0 +1,41 @@
+{
+    "name": "abenevaut/laravel-infrastructure",
+    "type": "library",
+    "description": "Laravel Infrastructure",
+    "keywords": [
+        "laravel",
+        "infrastructure"
+    ],
+    "license": "GPL-3.0-only",
+    "authors": [
+        {
+            "name": "Antoine Benevaut",
+            "email": "antoine@benevaut.fr"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "spatie/data-transfer-object": "^3.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "abenevaut\\Infrastructure\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": [
+            "vendor/bin/phparkitect check",
+            "vendor/bin/phpunit"
+        ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "mockery/mockery": "^1.5",
+        "phparkitect/phparkitect": "^0.3.5"
+    }
+}
