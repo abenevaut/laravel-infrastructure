@@ -5,9 +5,7 @@ namespace abenevaut\Infrastructure\App\Listeners;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
-abstract class QueuedListenerAbstract implements ShouldQueue
+abstract class QueuedListenerAbstract extends ListenerAbstract implements ShouldQueue
 {
     use InteractsWithQueue;
-
-    abstract function handle($event): void;
 }

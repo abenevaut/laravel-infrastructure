@@ -4,5 +4,5 @@ namespace abenevaut\Infrastructure\App\Listeners;
 
 abstract class ListenerAbstract
 {
-    abstract function handle($event): void;
+    abstract public function handle($event): void;
 }
