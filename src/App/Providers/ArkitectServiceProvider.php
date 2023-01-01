@@ -12,17 +12,14 @@ class ArkitectServiceProvider extends ServiceProvider
 
     public function register(): void
     {
-        $this
-            ->mergeConfigFrom($this->makeConfigPath('arkitect.php'), 'arkitect')
-        ;
+        $this->mergeConfigFrom($this->makeConfigPath('arkitect.php'), 'arkitect');
     }
 
     public function boot(): void
     {
         $this
             ->registerConfigs()
-            ->registerCommands()
-        ;
+            ->registerCommands();
     }
 
     private function registerCommands(): self

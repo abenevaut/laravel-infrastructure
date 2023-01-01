@@ -35,13 +35,6 @@
             "Tests\\": "tests/"
         }
     },
-    "scripts": {
-        "test": [
-            "vendor/bin/phpcs --standard=PSR12 src tests",
-            "vendor/bin/phparkitect check --config arkitect.php --target-php-version 8.1",
-            "vendor/bin/phpunit"
-        ]
-    },
     "extra": {
         "laravel": {
             "providers": [
@@ -51,7 +44,5 @@
                 "mortexa/laravel-arkitect"
             ]
         }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable" : true
+    }
 }

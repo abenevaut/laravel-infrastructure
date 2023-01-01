@@ -1,22 +1,22 @@
 <?php
 
-namespace abenevaut\Infrastructure\Architecture;
+namespace Tests\Architecture;
 
-use Arkitect\Expression\ForClasses\HaveNameMatching;
+use Arkitect\Expression\ForClasses\IsAbstract;
 use Arkitect\Expression\ForClasses\ResideInOneOfTheseNamespaces;
 use Arkitect\Rules\DSL\ArchRule;
 use Arkitect\Rules\Rule;
 use Mortexa\LaravelArkitect\Contracts\RuleContract;
 use Mortexa\LaravelArkitect\Rules\BaseRule;
 
-class ControllersContractsAreUniform extends BaseRule implements RuleContract
+class ControllersContractsAreAbstract extends BaseRule implements RuleContract
 {
     public static function rule(): ArchRule
     {
         return Rule::allClasses()
             ->that(new ResideInOneOfTheseNamespaces('abenevaut\Infrastructure\Http\Controllers'))
-            ->should(new HaveNameMatching('*ControllerAbstract'))
-            ->because('we want uniform naming for controllers contracts');
+            ->should(new IsAbstract())
+            ->because('we want to be sure that controllers contracts are abstract');
     }
 
     public static function path(): string

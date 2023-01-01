@@ -15,9 +15,13 @@ class ControllersContractsDependOnRestrictedNamespaces extends BaseRule implemen
     public static function rule(): ArchRule
     {
         return Rule::allClasses()
-            ->that(new ResideInOneOfTheseNamespaces('abenevaut\Infrastructure\Http\Controllers'))
-            ->should(new DependsOnlyOnTheseNamespaces('Illuminate\Routing', 'Illuminate\Foundation', 'abenevaut\Infrastructure\Http\Controllers'))
-            ->because('we want to protect controllers contracts from external dependencies except for Illuminate\Routing & Illuminate\Foundation');
+            ->that(new ResideInOneOfTheseNamespaces('App\Http\Controllers'))
+            ->should(new DependsOnlyOnTheseNamespaces(
+                'Illuminate\Routing',
+                'Illuminate\Foundation',
+                'abenevaut\Infrastructure\Http\Controllers'
+            ))
+            ->because('we want to protect controllers contracts from external dependencies');
     }
 
     public static function path(): string

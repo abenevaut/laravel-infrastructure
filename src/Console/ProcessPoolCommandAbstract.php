@@ -88,7 +88,6 @@ abstract class ProcessPoolCommandAbstract extends Command
             }
 
             usleep(10000);
-
         } while ($this->queueLength > 0 || $this->computingQueueLength > 0);
 
         $processPreparationBar->finish();

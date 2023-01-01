@@ -1,6 +1,7 @@
 <?php
 
 use Mortexa\LaravelArkitect\Rules\Extending\CommandsExtending;
+use Mortexa\LaravelArkitect\Rules\Extending\ControllersExtending;
 use Mortexa\LaravelArkitect\Rules\Extending\ExceptionsExtending;
 use Mortexa\LaravelArkitect\Rules\Extending\FactoriesExtending;
 use Mortexa\LaravelArkitect\Rules\Extending\MailsExtending;
@@ -54,9 +55,9 @@ return [
             MailsNaming::class,
         ],
         'extending' => [
-            \Tests\Architecture\ControllersExtending::class,
+            ControllersExtending::class,
             CommandsExtending::class,
-//            ExceptionsExtending::class,
+            ExceptionsExtending::class,
             RequestsExtending::class,
             ResourcesExtending::class,
             ResourceCollectionsExtending::class,
