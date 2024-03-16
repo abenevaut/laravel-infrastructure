@@ -15,7 +15,7 @@ class CommandsContractsAreAbstract extends BaseRule implements RuleContract
     {
         return Rule::allClasses()
             ->that(new ResideInOneOfTheseNamespaces('abenevaut\Infrastructure\Console'))
-            ->should(new IsAbstract())
+            ->should(new IsAbstract()) //  | new IsInterface() | new IsTrait()
             ->because('we want to be sure that commands contracts are abstract');
     }
 
