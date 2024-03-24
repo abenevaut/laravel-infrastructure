@@ -16,7 +16,7 @@
     ],
     "require": {
         "php": "^8.1",
-        "mortexa/laravel-arkitect": "^0.4"
+        "mortexa/laravel-arkitect": "^0.4 || ^0.7"
     },
     "require-dev": {
         "phpunit/phpunit": "^10.5",
