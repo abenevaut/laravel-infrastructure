@@ -2,7 +2,7 @@
 
 namespace Tests\Unit;
 
-use abenevaut\Infrastructure\Console\ProcessPoolCommandAbstract;
+use abenevaut\Infrastructure\Console\Commands\ProcessPoolCommandAbstract;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Process\Process;
 

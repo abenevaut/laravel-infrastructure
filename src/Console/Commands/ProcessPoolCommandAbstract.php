@@ -1,6 +1,6 @@
 <?php
 
-namespace abenevaut\Infrastructure\Console;
+namespace abenevaut\Infrastructure\Console\Commands;
 
 use Illuminate\Console\Command;
 use Symfony\Component\Process\Process;

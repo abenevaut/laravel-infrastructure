@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Rules;
+namespace abenevaut\Infrastructure\Rules;
 
 use PhpParser\Node;
 use PhpParser\Node\Expr\FuncCall;
@@ -29,9 +29,7 @@ class CodeDoesNotContainDumpRule implements Rule
 
         if (in_array($functionName, ['dd', 'var_dump', 'dump'], true)) {
             return [
-                RuleErrorBuilder::message(
-                    sprintf('Method %s is prohibited', $functionName)
-                )->build(),
+                RuleErrorBuilder::message("Method {$functionName} is prohibited")->build(),
             ];
         }
 
