@@ -1,0 +1,8 @@
+parameters:
+  level: 1
+  editorUrl: 'phpstorm://open?file=%%file%%&line=%%line%%'
+  paths:
+    - src
+rules:
+  - Tests\Rules\CodeDoesNotContainDumpRule
+  - Tests\Rules\ControllersExtendBaseControllerRule

@@ -7,10 +7,16 @@ use Symfony\Component\Process\Process;
 
 abstract class ProcessPoolCommandAbstract extends Command
 {
+    /**
+     * @var array<Process>
+     */
     private array $queue = [];
 
     private int $queueLength = 0;
 
+    /**
+     * @var array<Process>
+     */
     private array $computingQueue = [];
 
     private int $computingQueueLength = 0;
@@ -24,7 +30,7 @@ abstract class ProcessPoolCommandAbstract extends Command
         return $this->queueLength;
     }
 
-    public function handle(): bool
+    public function handle(): int
     {
         return $this
             ->boot()
